@@ -1,0 +1,46 @@
+.Contact {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact-msg {
+  width: 700px;
+  text-align: center;
+  border-radius: 20px;
+  background: #ebebeb;
+  box-shadow: 39px 39px 78px #a5a5a5, -39px -39px 78px #dbdbdb;
+}
+
+.Contact-msg .msg {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+  padding: 50px;
+}
+
+.Contact-msg address {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.Contact-links {
+  width: 600px;
+}
+
+.Contact-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+}
+
+.Contact-links li {
+  list-style: none;
+  
+}
+
+.Contact-links .icon{
+    font-size: 50px;
+}

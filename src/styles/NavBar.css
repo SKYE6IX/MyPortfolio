@@ -1,0 +1,12 @@
+.Navlink-lg{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.Navlink-sm{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
