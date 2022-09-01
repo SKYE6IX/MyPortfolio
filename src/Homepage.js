@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./context/theme.context";
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,12 +10,13 @@ import img from "./images/IMG_1655.JPG";
 import "./styles/Homepage.css";
 
 function Homepage() {
+  const { isDarkMode } = useContext(ThemeContext);
   return (
     <section className="Homepage-container">
       <div className="Homepage-text-area">
-        <h1>Hey I'm Azeez!</h1>
+        <h1 className={isDarkMode && "darkModeH1"}>Hey I'm Azeez!</h1>
         <p>
-          React web developer from Moscow, Russia. I create website to help
+          React web developer living in Moscow, Russia. I create website to help
           business do better online. Turning idea to real life product is what i
           enjoy doing the most.
         </p>
@@ -26,12 +28,16 @@ function Homepage() {
           <ul>
             <li>
               <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">
-                <GitHubIcon className="icon" />
+                <GitHubIcon
+                  className={`icon ${isDarkMode && "darkModeIcon"}`}
+                />
               </IconButton>
             </li>
             <li>
               <IconButton LinkComponent="a" href="https://twitter.com/skye_6ix">
-                <TwitterIcon className="icon" />
+                <TwitterIcon
+                  className={`icon ${isDarkMode && "darkModeIcon"}`}
+                />
               </IconButton>
             </li>
             <li>
@@ -39,12 +45,16 @@ function Homepage() {
                 LinkComponent="a"
                 href="http://linkedin.com/in/busari-azeez-70b743104"
               >
-                <LinkedInIcon className="icon" />
+                <LinkedInIcon
+                  className={`icon ${isDarkMode && "darkModeIcon"}`}
+                />
               </IconButton>
             </li>
             <li>
               <IconButton LinkComponent="a" href="https://t.me/Skye6ix">
-                <TelegramIcon className="icon" />
+                <TelegramIcon
+                  className={`icon ${isDarkMode && "darkModeIcon"}`}
+                />
               </IconButton>
             </li>
           </ul>
@@ -52,9 +62,7 @@ function Homepage() {
       </div>
 
       <div className="Homepage-img-area">
-        <div className="img-container">
-          <img src={img} style={{ maxWidth: "300px" }} />
-        </div>
+        <img src={img} className="self-img" />
       </div>
     </section>
   );

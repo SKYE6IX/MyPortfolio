@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,40 +8,41 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink } from "react-router-dom";
+import logo from "./images/IMG_1735.JPG";
+import SwitchTheme from "./styles/Switch";
+import { ThemeContext } from "./context/theme.context";
 import "./styles/NavBar.css";
 
 const pages = ["project", "contact", "about"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{
+        boxShadow: "none",
+        backgroundColor: isDarkMode ? "black" : "white",
+        height: '10%',
+        marginBottom: '0',
+        transition: 'background-color 1s ease-in-out',
+        
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -53,13 +54,14 @@ const NavBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: isDarkMode ? 'white' : 'black',
               textDecoration: "none",
             }}
           >
             SKYE
           </Typography>
 
+          {/* Drop down Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -67,11 +69,11 @@ const NavBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{color: isDarkMode ? 'white' : 'black'}}
             >
               <MenuIcon />
             </IconButton>
-            {/* Drop down Menu */}
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -100,7 +102,6 @@ const NavBar = () => {
             </Menu>
             {/* End of drop down Menu */}
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -113,7 +114,7 @@ const NavBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: isDarkMode ? 'white' : 'black',
               textDecoration: "none",
             }}
           >
@@ -121,7 +122,13 @@ const NavBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <NavLink to={`/${page}`} className="Navlink-lg" key={page}>
+              <NavLink
+                to={`/${page}`}
+                className={`Navlink-lg ${
+                  isDarkMode ? "darkMode" : "lightMode"
+                }`}
+                key={page}
+              >
                 {page}
               </NavLink>
               // <Button
@@ -134,35 +141,12 @@ const NavBar = () => {
             ))}
           </Box>
 
+          <SwitchTheme onChange={toggleDarkMode} checked={isDarkMode}/>
           {/* User Page */}
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <IconButton LinkComponent={NavLink} to="/about" sx={{ p: 0 }}>
+              <Avatar alt="Remy Sharp" src={logo} />
+            </IconButton>
           </Box>
         </Toolbar>
       </Container>
