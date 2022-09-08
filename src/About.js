@@ -1,14 +1,25 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 import { ThemeContext } from "./context/theme.context";
 
 import Typography from "@mui/material/Typography";
 import "./styles/About.css";
 function About() {
-  const {isDarkMode} = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   return (
-    <div className="About-container">
+    <motion.div
+      className="About-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ delay: "1s" }}
+    >
       <article className="About">
-        <Typography variant="h2" gutterBottom className={`About-title ${isDarkMode && 'darkTitle'}`}>
+        <Typography
+          variant="h2"
+          gutterBottom
+          className={`About-title ${isDarkMode && "darkTitle"}`}
+        >
           Hi there, I'm Azeez
         </Typography>
         <Typography variant="body2" gutterBottom className="About-text">
@@ -26,12 +37,12 @@ function About() {
           whenever i have the opportunity to build up a new web application
           because of the feeling that i am about to make someone's life easier.
           I embrace the challenges that comes with coding, this drives me to
-          want to work harder and solve problem. I am always ready to
-          learn more and acquire new knowledge.
+          want to work harder and solve problem. I am always ready to learn more
+          and acquire new knowledge.
         </Typography>
       </article>
-      
-      <div className={`About-skills ${isDarkMode && 'darkH2'}`}>
+
+      <div className={`About-skills ${isDarkMode && "darkH2"}`}>
         <h2>Main Skills</h2>
         <div className="columns skills">
           <ul>
@@ -94,7 +105,7 @@ function About() {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

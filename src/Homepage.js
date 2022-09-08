@@ -8,11 +8,18 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import IconButton from "@mui/material/IconButton";
 import img from "./images/IMG_1655.JPG";
 import "./styles/Homepage.css";
+import { motion } from "framer-motion";
 
 function Homepage() {
   const { isDarkMode } = useContext(ThemeContext);
   return (
-    <section className="Homepage-container">
+    <motion.section
+      className="Homepage-container"
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{delay: '1s'}}
+    >
       <div className="Homepage-text-area">
         <h1 className={isDarkMode && "darkModeH1"}>Hey I'm Azeez!</h1>
         <p>
@@ -64,7 +71,7 @@ function Homepage() {
       <div className="Homepage-img-area">
         <img src={img} className="self-img" />
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -6,17 +6,27 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import IconButton from "@mui/material/IconButton";
+import { motion } from "framer-motion";
 import "./styles/Contact.css";
 function Contact() {
   const { isDarkMode } = useContext(ThemeContext);
   return (
-    <div className="Contact">
+    <motion.div
+      className="Contact"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ delay: "1s" }}
+    >
       <section className={`Contact-msg ${isDarkMode && "msgDarkMode"}`}>
         <Typography variant="subtitle1" gutterBottom className="msg">
           My approach is simple, make something great and make it personal. Join
           me and let build modern web applications together
         </Typography>
-        <a href="mailto: skye6ix@gmail.com" className={`mail ${isDarkMode && 'mailDarkMode'}`}>
+        <a
+          href="mailto: skye6ix@gmail.com"
+          className={`mail ${isDarkMode && "mailDarkMode"}`}
+        >
           skye6ix@gmail.com
         </a>
       </section>
@@ -24,12 +34,12 @@ function Contact() {
         <ul>
           <li>
             <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">
-              <GitHubIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
+              <GitHubIcon className={`icon ${isDarkMode && "darkModeIcon"}`} />
             </IconButton>
           </li>
           <li>
             <IconButton LinkComponent="a" href="https://twitter.com/skye_6ix">
-              <TwitterIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
+              <TwitterIcon className={`icon ${isDarkMode && "darkModeIcon"}`} />
             </IconButton>
           </li>
           <li>
@@ -37,17 +47,21 @@ function Contact() {
               LinkComponent="a"
               href="http://linkedin.com/in/busari-azeez-70b743104"
             >
-              <LinkedInIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
+              <LinkedInIcon
+                className={`icon ${isDarkMode && "darkModeIcon"}`}
+              />
             </IconButton>
           </li>
           <li>
             <IconButton LinkComponent="a" href="https://t.me/Skye6ix">
-              <TelegramIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
+              <TelegramIcon
+                className={`icon ${isDarkMode && "darkModeIcon"}`}
+              />
             </IconButton>
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
