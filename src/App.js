@@ -1,4 +1,4 @@
-import { Routes, Route, Router, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import PageContent from "./PageContent";
 import Homepage from "./Homepage";
 import NavBar from "./NavBar";
@@ -7,9 +7,7 @@ import Project from "./Project";
 import Contact from "./Contact";
 import Foooter from "./Foooter";
 import { ThemeProvider } from "./context/theme.context";
-// import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { AnimatePresence } from "framer-motion";
-import "./styles/TransitionPage.css";
 import React from "react";
 
 function App() {

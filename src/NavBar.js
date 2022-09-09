@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
-import { NavLink } from "react-router-dom";
 import logo from "./images/IMG_1735.JPG";
 import SwitchTheme from "./styles/Switch";
 import { ThemeContext } from "./context/theme.context";

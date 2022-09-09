@@ -13,9 +13,16 @@ function Contact() {
   return (
     <motion.div
       className="Contact"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 300 }}
+      animate={{
+        opacity: 1,
+        y: 1,
+        transition: {
+          ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1.6,
+        },
+      }}
+      exit={{ opacity: 0, y: -200 }}
       transition={{ delay: "1s" }}
     >
       <section className={`Contact-msg ${isDarkMode && "msgDarkMode"}`}>
