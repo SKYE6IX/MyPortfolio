@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import LaunchIcon from "@mui/icons-material/Launch";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import skyecampImg from "./images/skyecamp.png";
+import skyecampImg from "./images/skyecamp.jpeg";
 import colorImg from "./images/react_color.png";
 import todoAppImg from "./images/todo_app.png";
 import { ThemeContext } from "./context/theme.context";
