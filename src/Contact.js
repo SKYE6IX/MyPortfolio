@@ -52,7 +52,7 @@ function Contact() {
           <li>
             <IconButton
               LinkComponent="a"
-              href="http://linkedin.com/in/busari-azeez-70b743104"
+              href="https://www.linkedin.com/in/azeezabiola/"
             >
               <LinkedInIcon
                 className={`icon ${isDarkMode && "darkModeIcon"}`}

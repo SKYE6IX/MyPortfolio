@@ -97,7 +97,7 @@ function Project() {
         <div className="Project-text">
           <Typography gutterBottom variant="p">
             This color app palette was built while i was study <b>React</b>{" "}
-            bootstrap course. It's an interactive app that let you create your
+            bootcamp course. It's an interactive app that let you create your
             own color palettes. It has the feature to copy the color in Hex,
             RGB, RGBA.
           </Typography>
@@ -130,8 +130,9 @@ function Project() {
         </div>
         <div className="Project-text">
           <Typography gutterBottom variant="p">
-            This todo app is more like a skill testing for me, and i plan to add
-            more features to it along the way
+            I have always have troubles dealing with how to plan my daily task.
+            So i decided to use my skills to build a todo app. This app is build
+            with react and will still add more features in future.
           </Typography>
         </div>
         <div className="Project-link-btn">

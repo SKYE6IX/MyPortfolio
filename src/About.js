@@ -50,14 +50,15 @@ function About() {
         </Typography>
         <Typography variant="body2" gutterBottom className="About-text">
           I'm a front-end developer who love to build user-friendly website and
-          web applications. I started as a computer hardware engineer and
-          decided to change career to become a web developer. I want to work in
-          web dev environments because of the joy of creating something that is
-          being use by thousands of user and also want to be part of the modern
-          world development. I have study through 1000+ hours of bootcamps
-          structure, learning <b>HTML,CSS,JavaScript,NodeJS</b> include
-          framework like <b>Express</b> and templating like <b>EJS</b> and
-          database <b>MongoDB with mongoose</b>. Also Study the famous
+          web applications. I started as a computer hardware engineer but when i
+          created my first static landing page I learned something unexpected
+          about myself and decided to change career to become a web developer.
+          I want to work in web development environments because of the joy of creating
+          something that is being use by thousands of user and also want to be
+          part of the modern world development. I have completed 1000+ hours
+          of bootcamps structure, learning <b>HTML,CSS,JavaScript,NodeJS</b>{" "}
+          include framework like <b>Express</b> and templating like <b>EJS</b>{" "}
+          and database <b>MongoDB with mongoose</b>. Also study the famous
           JavaScript library <b>REACT</b> along with it's associates. With the
           new skill i have acquired along with lot of hands on practice, i get
           excited whenever i have the opportunity to build up a new web
@@ -80,8 +81,8 @@ function About() {
             </li>
             <li>Front-end Developer, Some knowledge of back-end </li>
             <li>
-              JavaScrips, HTML, CSS, REACT, NextJs, NodeJS, Express, MongoDB,
-              WordPress{" "}, BootStrap
+              JavaScripts, REACT, NodeJS, Express, MongoDB,
+              WordPress , BootStrap, CSS
             </li>
           </ul>
         </div>
@@ -112,8 +113,8 @@ function About() {
           <ul>
             <li>Currently working as a freelancer</li>
             <li>
-              I have been working with React, i have created multiple web apps with
-              it include my portfolio website
+              I have been working with React, i have created multiple web apps
+              with it include my portfolio website
             </li>
           </ul>
         </div>
