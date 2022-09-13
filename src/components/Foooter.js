@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import { ThemeContext } from './context/theme.context';
-import './styles/Footer.css'
+import { ThemeContext } from '../context/theme.context';
+import '../styles/Footer.css'
 function Foooter() {
   const {isDarkMode} = useContext(ThemeContext)
   return (
@@ -10,6 +10,4 @@ function Foooter() {
     </footer>
   )
 }
-
-
 export default Foooter;

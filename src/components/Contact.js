@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./context/theme.context";
+import { ThemeContext } from "../context/theme.context";
 import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import IconButton from "@mui/material/IconButton";
 import { motion } from "framer-motion";
-import "./styles/Contact.css";
+import "../styles/Contact.css";
 function Contact() {
   const { isDarkMode } = useContext(ThemeContext);
   return (

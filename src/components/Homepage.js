@@ -7,9 +7,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import IconButton from "@mui/material/IconButton";
-import { ThemeContext } from "./context/theme.context";
-import img from "./images/IMG_1655.webp";
-import "./styles/Homepage.css";
+import { ThemeContext } from "../context/theme.context";
+import img from "../images/IMG_1655.webp";
+import "../styles/Homepage.css";
 
 
 //variant for framer motion

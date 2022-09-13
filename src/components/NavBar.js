@@ -10,10 +10,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "./images/IMG_1735.JPG";
-import SwitchTheme from "./styles/Switch";
-import { ThemeContext } from "./context/theme.context";
-import "./styles/NavBar.css";
+import logo from "../images/IMG_1735.JPG";
+import SwitchTheme from "../styles/Switch";
+import { ThemeContext } from "../context/theme.context";
+import "../styles/NavBar.css";
 
 const pages = ["project", "contact", "about"];
 
