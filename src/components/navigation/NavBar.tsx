@@ -1,44 +1,42 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import MenuItem from "@mui/material/MenuItem";
-import logo from "../images/IMG_1735.JPG";
-import SwitchTheme from "../styles/Switch";
-import { ThemeContext } from "../context/theme.context";
-import "../styles/NavBar.css";
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import MenuItem from '@mui/material/MenuItem';
+// import logo from '../images/IMG_1735.JPG';
+import SwitchTheme from './Switch';
+import { ThemeContext } from '../../context/theme.context';
 
-const pages = ["project", "contact", "about"];
+const pages = ['project', 'contact', 'about'];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  // const handleOpenNavMenu = (event) => {
+  //   setAnchorElNav(event.currentTarget);
+  // };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  // const handleCloseNavMenu = () => {
+  //   setAnchorElNav(null);
+  // };
 
   return (
     <AppBar
       position="static"
       sx={{
-        boxShadow: "none",
-        backgroundColor: isDarkMode ? "black" : "white",
+        boxShadow: 'none',
+        backgroundColor: isDarkMode ? 'black' : 'white',
         height: '10%',
         marginBottom: '0',
         transition: 'background-color 1s ease-in-out',
-        
       }}
     >
       <Container maxWidth="xl">
@@ -50,26 +48,26 @@ const NavBar = () => {
             to="/"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: '.3rem',
               color: isDarkMode ? 'white' : 'black',
-              textDecoration: "none",
+              textDecoration: 'none',
             }}
           >
             SKYE
           </Typography>
 
           {/* Drop down Menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              sx={{color: isDarkMode ? 'white' : 'black'}}
+              // onClick={handleOpenNavMenu}
+              sx={{ color: isDarkMode ? 'white' : 'black' }}
             >
               <MenuIcon />
             </IconButton>
@@ -78,22 +76,22 @@ const NavBar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              // onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page}>
                   <NavLink to={`/${page}`} className="Navlink-sm" key={page}>
                     {page}
                   </NavLink>
@@ -109,23 +107,23 @@ const NavBar = () => {
             to="/"
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: '.3rem',
               color: isDarkMode ? 'white' : 'black',
-              textDecoration: "none",
+              textDecoration: 'none',
             }}
           >
             SKYE
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <NavLink
                 to={`/${page}`}
                 className={`Navlink-lg ${
-                  isDarkMode ? "darkMode" : "lightMode"
+                  isDarkMode ? 'darkMode' : 'lightMode'
                 }`}
                 key={page}
               >
@@ -141,12 +139,12 @@ const NavBar = () => {
             ))}
           </Box>
 
-          <SwitchTheme onChange={toggleDarkMode} checked={isDarkMode}/>
+          <SwitchTheme onChange={toggleDarkMode} checked={isDarkMode} />
           {/* User Page */}
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton LinkComponent={NavLink} to="/about" sx={{ p: 0 }}>
+            {/* <IconButton LinkComponent={NavLink} to="/about" sx={{ p: 0 }}>
               <Avatar alt="Remy Sharp" src={logo} />
-            </IconButton>
+            </IconButton> */}
           </Box>
         </Toolbar>
       </Container>

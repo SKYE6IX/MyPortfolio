@@ -1,18 +1,22 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../context/theme.context";
-import Typography from "@mui/material/Typography";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import IconButton from "@mui/material/IconButton";
-import { motion } from "framer-motion";
-import "../styles/Contact.css";
-function Contact() {
+import { useContext } from 'react';
+import { ThemeContext } from '../../../context/theme.context';
+import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import IconButton from '@mui/material/IconButton';
+import {
+  ContactContainer,
+  ContactText,
+  ContactMail,
+  ContactIconsWrapper,
+} from './style';
+
+const Contact = () => {
   const { isDarkMode } = useContext(ThemeContext);
   return (
-    <motion.div
-      className="Contact"
+    <ContactContainer
       initial={{ opacity: 0, y: 300 }}
       animate={{
         opacity: 1,
@@ -23,30 +27,31 @@ function Contact() {
         },
       }}
       exit={{ opacity: 0, y: -200 }}
-      transition={{ delay: "1s" }}
+      transition={{ delay: 1 }}
     >
-      <section className={`Contact-msg ${isDarkMode && "msgDarkMode"}`}>
+      <ContactText className={`Contact-msg ${isDarkMode && 'msgDarkMode'}`}>
         <Typography variant="subtitle1" gutterBottom className="msg">
           My approach is simple, make something great and make it personal. Join
           me and let build modern web applications together
         </Typography>
-        <a
+        <ContactMail
           href="mailto: skye6ix@gmail.com"
-          className={`mail ${isDarkMode && "mailDarkMode"}`}
+          // className={`mail ${isDarkMode && 'mailDarkMode'}`}
         >
           skye6ix@gmail.com
-        </a>
-      </section>
-      <div className="Contact-links">
+        </ContactMail>
+      </ContactText>
+
+      <ContactIconsWrapper>
         <ul>
           <li>
             <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">
-              <GitHubIcon className={`icon ${isDarkMode && "darkModeIcon"}`} />
+              <GitHubIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
             </IconButton>
           </li>
           <li>
             <IconButton LinkComponent="a" href="https://twitter.com/skye_6ix">
-              <TwitterIcon className={`icon ${isDarkMode && "darkModeIcon"}`} />
+              <TwitterIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
             </IconButton>
           </li>
           <li>
@@ -55,21 +60,21 @@ function Contact() {
               href="https://www.linkedin.com/in/azeezabiola/"
             >
               <LinkedInIcon
-                className={`icon ${isDarkMode && "darkModeIcon"}`}
+              // className={`icon ${isDarkMode && 'darkModeIcon'}`}
               />
             </IconButton>
           </li>
           <li>
             <IconButton LinkComponent="a" href="https://t.me/Skye6ix">
               <TelegramIcon
-                className={`icon ${isDarkMode && "darkModeIcon"}`}
+              // className={`icon ${isDarkMode && 'darkModeIcon'}`}
               />
             </IconButton>
           </li>
         </ul>
-      </div>
-    </motion.div>
+      </ContactIconsWrapper>
+    </ContactContainer>
   );
-}
+};
 
 export default Contact;
