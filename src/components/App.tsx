@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import PageContent from './PageContent';
 import Homepage from './pages/home/Homepage';
-// import NavBar from './navigation/NavBar';
+import NavBar from './navigation/nav-bar/NavBar';
 import About from './pages/about/About';
 import Project from './pages/project/Project';
 import Contact from './pages/contact/Contact';
@@ -15,7 +15,7 @@ const App = () => {
     <AnimatePresence>
       <ThemeProvider>
         <PageContent>
-          {/* <NavBar /> */}
+          <NavBar />
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
@@ -28,5 +28,4 @@ const App = () => {
     </AnimatePresence>
   );
 };
-
 export default App;

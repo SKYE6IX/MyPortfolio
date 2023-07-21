@@ -20,7 +20,7 @@ html{
 const Main = styled.main`
   padding: 0;
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   transition: background-color 1s ease-in-out;
