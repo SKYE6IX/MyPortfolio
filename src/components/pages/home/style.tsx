@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const HomeContainer = styled(motion.div)`
-  margin-top: auto;
+  /* margin-top: auto; */
   width: 100%;
   display: grid;
   gap: 12em;

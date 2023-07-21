@@ -17,7 +17,6 @@ import {
 } from './style';
 
 const NavBar = () => {
-  // const [anchorElNav, setAnchorElNav] = React.useState(null);
   const navRef = useRef(null);
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -26,7 +25,6 @@ const NavBar = () => {
   const handleCloseNav = () => {
     toggleOpen();
   };
-
   return (
     <NavBarContainer>
       {windowWidth < 769 && (
