@@ -14,14 +14,20 @@ const MenuItem = ({ handleCloseNav, isOpen }: MenuItemProps) => {
   return (
     <MenuLists variants={menuVariants}>
       {menuLists.map((list, i) => (
-        <NavLink to={`/${list}`} onClick={handleCloseNav} key={i}>
+        <NavLink
+          to={`/${list}`}
+          onClick={handleCloseNav}
+          key={i}
+          style={{
+            pointerEvents: isOpen || windowWidth > 768 ? 'auto' : 'none',
+          }}
+        >
           <Menu
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             variants={listVariants}
           >
-            {isOpen && list}
-            {windowWidth > 768 && list}
+            {list}
           </Menu>
         </NavLink>
       ))}
