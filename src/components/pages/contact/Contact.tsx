@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../../context/theme.context';
-import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
