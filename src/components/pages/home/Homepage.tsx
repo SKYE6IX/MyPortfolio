@@ -34,7 +34,7 @@ const Homepage = () => {
           to help business do better online. Turning idea to real life product
           is what i enjoy doing the most.
         </p>
-        <NavLink to="/project">
+        <NavLink to="/project" style={{ textDecoration: 'none' }}>
           <Button variant="contained" color="success">
             My Project
           </Button>
