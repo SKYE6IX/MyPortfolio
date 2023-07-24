@@ -29,15 +29,12 @@ const Contact = () => {
       exit={{ opacity: 0, y: -200 }}
       transition={{ delay: 1 }}
     >
-      <ContactText className={`Contact-msg ${isDarkMode && 'msgDarkMode'}`}>
-        <Typography variant="subtitle1" gutterBottom className="msg">
+      <ContactText>
+        <p>
           My approach is simple, make something great and make it personal. Join
-          me and let build modern web applications together
-        </Typography>
-        <ContactMail
-          href="mailto: skye6ix@gmail.com"
-          // className={`mail ${isDarkMode && 'mailDarkMode'}`}
-        >
+          me and let build modern web applications together.
+        </p>
+        <ContactMail href="mailto: skye6ix@gmail.com">
           skye6ix@gmail.com
         </ContactMail>
       </ContactText>
@@ -46,12 +43,12 @@ const Contact = () => {
         <ul>
           <li>
             <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">
-              <GitHubIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
+              <GitHubIcon />
             </IconButton>
           </li>
           <li>
             <IconButton LinkComponent="a" href="https://twitter.com/skye_6ix">
-              <TwitterIcon className={`icon ${isDarkMode && 'darkModeIcon'}`} />
+              <TwitterIcon />
             </IconButton>
           </li>
           <li>
@@ -59,16 +56,12 @@ const Contact = () => {
               LinkComponent="a"
               href="https://www.linkedin.com/in/azeezabiola/"
             >
-              <LinkedInIcon
-              // className={`icon ${isDarkMode && 'darkModeIcon'}`}
-              />
+              <LinkedInIcon />
             </IconButton>
           </li>
           <li>
             <IconButton LinkComponent="a" href="https://t.me/Skye6ix">
-              <TelegramIcon
-              // className={`icon ${isDarkMode && 'darkModeIcon'}`}
-              />
+              <TelegramIcon />
             </IconButton>
           </li>
         </ul>

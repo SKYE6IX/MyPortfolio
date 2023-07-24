@@ -6,32 +6,48 @@ export const ContactContainer = styled(motion.div)`
   height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `;
 
-export const ContactText = styled.section`
+export const ContactText = styled.div`
   width: 40%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
   padding: 2.5em;
-  border-radius: 20px;
+  border-radius: 1em;
   background: #ebebeb;
   box-shadow:
     39px 39px 78px #a5a5a5,
     -39px -39px 78px #dbdbdb;
-  span {
+  text-align: center;
+  p {
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.5rem;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    width: 80%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    width: 60%;
   }
 `;
 
 export const ContactMail = styled.a`
   font-family: 'Roboto', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.2rem;
   text-decoration: none;
   color: black;
+  transition:
+    border-bottom ease-in-out 0.3s,
+    transform ease-in-out 0.3s;
+  width: 180px;
+  height: 25px;
   &:hover {
-    border-bottom: 3px solid grey;
+    border-bottom: 2px solid grey;
+    transform: scale(1.2);
   }
 `;
 // .Contact-msg .mailDarkMode {
@@ -55,28 +71,4 @@ export const ContactIconsWrapper = styled.div`
 `;
 // .Contact-links .darkModeIcon {
 //   color: #b7b7ac;
-// }
-
-// @media only screen and (min-width: 320px) and (max-width: 767px) {
-//   .Contact-msg {
-//     width: 70%;
-//   }
-//   .Contact-msg .msg {
-//     font-size: 1.2em;
-//   }
-//   .Contact-msg .mail {
-//     font-size: 1.2em;
-//   }
-//   .Contact-links .icon {
-//     font-size: 2em;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 991px){
-//   .Contact-msg {
-//     width: 50%;
-//   }
-//   .Contact-links .icon {
-//     font-size: 2em;
-//   }
 // }
