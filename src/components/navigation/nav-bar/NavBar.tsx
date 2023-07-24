@@ -7,6 +7,7 @@ import SwitchTheme from './Switch';
 import MenuItem from '../menu/MenuItems';
 import MenuToggle from '../menu/MenuToggle';
 import useWindowSize from '../../../hooks/useWindowSize';
+import me from './me.webp';
 import {
   NavBarContainer,
   NavBarName,
@@ -56,7 +57,9 @@ const NavBar = () => {
       )}
       <NavBarRightSideWrapper>
         <SwitchTheme checked={isDarkMode} onChange={toggleDarkMode} />
-        <Avatar />
+        <NavLink to="/about">
+          <Avatar src={me} alt="Azeez_Picture" />
+        </NavLink>
       </NavBarRightSideWrapper>
     </NavBarContainer>
   );
