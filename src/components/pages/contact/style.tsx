@@ -9,7 +9,7 @@ export const ContactContainer = styled(motion.div)`
   align-items: center;
 `;
 
-export const ContactText = styled.div`
+export const ContactText = styled.div<{ $isDarkMode: boolean }>`
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -17,15 +17,18 @@ export const ContactText = styled.div`
   gap: 1em;
   padding: 2.5em;
   border-radius: 1em;
-  background: #ebebeb;
-  box-shadow:
-    39px 39px 78px #a5a5a5,
-    -39px -39px 78px #dbdbdb;
+  background: ${({ $isDarkMode }) => ($isDarkMode ? '#383737' : '#ebebeb')};
+  box-shadow:${({ $isDarkMode }) =>
+    $isDarkMode
+      ? '39px 39px 56px #232222, -39px -39px 56px #4d4c4c'
+      : '39px 39px 78px #a5a5a5, -39px -39px 78px #dbdbdb'}
   text-align: center;
   p {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+    text-align:center;
+    color: ${({ $isDarkMode }) => $isDarkMode && '#f8f9fa'};
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     width: 80%;
@@ -35,11 +38,11 @@ export const ContactText = styled.div`
   }
 `;
 
-export const ContactMail = styled.a`
+export const ContactMail = styled.a<{ $isDarkMode: boolean }>`
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   text-decoration: none;
-  color: black;
+  color: ${({ $isDarkMode }) => ($isDarkMode ? '#f8f9fa' : 'black')};
   transition:
     border-bottom ease-in-out 0.3s,
     transform ease-in-out 0.3s;
@@ -50,11 +53,8 @@ export const ContactMail = styled.a`
     transform: scale(1.2);
   }
 `;
-// .Contact-msg .mailDarkMode {
-//   color: white;
-// }
 
-export const ContactIconsWrapper = styled.div`
+export const ContactIconsWrapper = styled.div<{ $isDarkMode: boolean }>`
   width: 50%;
   ul {
     display: flex;
@@ -67,8 +67,6 @@ export const ContactIconsWrapper = styled.div`
   }
   svg {
     font-size: 2.5em;
+    color: ${({ $isDarkMode }) => $isDarkMode && '#b7b7ac'};
   }
 `;
-// .Contact-links .darkModeIcon {
-//   color: #b7b7ac;
-// }

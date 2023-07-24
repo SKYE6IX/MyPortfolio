@@ -16,12 +16,13 @@ export const MenuLists = styled(motion.ul)`
   }
 `;
 
-export const Menu = styled(motion.li)`
+export const Menu = styled(motion.li)<{ $isDarkMode: boolean }>`
   list-style: none;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1.2rem;
+  color: ${({ $isDarkMode }) => ($isDarkMode ? ' #f8f9fa' : 'black')};
 `;
 
 // VARIANTS

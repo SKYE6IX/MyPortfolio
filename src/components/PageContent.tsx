@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
 html{
     box-sizing: border-box;
     font-size: 16px;
+
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -17,7 +18,7 @@ html{
     font-size: 16px;
   }
 `;
-const Main = styled.main`
+const Main = styled.main<{ $isDarkMode: boolean }>`
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -25,19 +26,14 @@ const Main = styled.main`
   flex-direction: column;
   transition: background-color 1s ease-in-out;
   box-sizing: border-box;
+  background-color: ${({ $isDarkMode }) => ($isDarkMode ? 'black' : 'white')};
 `;
-// .darkMode{
-//     background-color: black;
-// }
-
-// .lightMode{
-//     background-color: white;
-// }
 
 const PageContent = ({ children }: { children: React.ReactNode }) => {
   const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <Main>
+    <Main $isDarkMode={isDarkMode}>
       <GlobalStyles />
       {children}
     </Main>

@@ -28,17 +28,17 @@ const Contact = () => {
       exit={{ opacity: 0, y: -200 }}
       transition={{ delay: 1 }}
     >
-      <ContactText>
+      <ContactText $isDarkMode={isDarkMode}>
         <p>
           My approach is simple, make something great and make it personal. Join
           me and let build modern web applications together.
         </p>
-        <ContactMail href="mailto: skye6ix@gmail.com">
+        <ContactMail $isDarkMode={isDarkMode} href="mailto: skye6ix@gmail.com">
           skye6ix@gmail.com
         </ContactMail>
       </ContactText>
 
-      <ContactIconsWrapper>
+      <ContactIconsWrapper $isDarkMode={isDarkMode}>
         <ul>
           <li>
             <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">

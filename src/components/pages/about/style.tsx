@@ -9,13 +9,13 @@ export const AboutContainer = styled(motion.div)`
   align-items: center;
 `;
 
-export const ScrollBar = styled(motion.div)`
+export const ScrollBar = styled(motion.div)<{ $isDarkMode: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 5px;
-  background: #1d314c;
+  background: ${({ $isDarkMode }) => ($isDarkMode ? '#e9ecef' : '#1d314c')};
   transform-origin: 0%;
 `;
 
@@ -29,33 +29,31 @@ export const TextWrapper = styled.article`
   }
 `;
 
-export const AboutTitle = styled(motion.h2)`
+export const AboutTitle = styled(motion.h2)<{ $isDarkMode: boolean }>`
   font-family: 'Open Sans', sans-serif;
   font-size: 3rem;
   font-weight: 500;
-  color: #1d314c;
+  color: ${({ $isDarkMode }) => ($isDarkMode ? '#f8f9fa' : '#1d314c')};
   margin-bottom: 0;
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 2rem;
   }
 `;
-// .About .darkTitle {
-//   color: white;
-// }
 
-export const AboutText = styled(motion.p)`
+export const AboutText = styled(motion.p)<{ $isDarkMode: boolean }>`
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
+  color: ${({ $isDarkMode }) => $isDarkMode && '#dee2e6'};
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 1rem;
   }
 `;
 
-export const AboutSkillsWrapper = styled(motion.div)`
+export const AboutSkillsWrapper = styled(motion.div)<{ $isDarkMode: boolean }>`
   width: 50%;
   h2 {
-    color: #1d314c;
+    color: ${({ $isDarkMode }) => ($isDarkMode ? '#f8f9fa' : '#1d314c')};
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     width: 80%;
@@ -73,10 +71,7 @@ export const AboutSkillsWrapper = styled(motion.div)`
     width: 70%;
   }
 `;
-// .darkH2 h2 {
-//   color: white;
-// }
-export const AboutSkillsColumn = styled.div`
+export const AboutSkillsColumn = styled.div<{ $isDarkMode: boolean }>`
   ul {
     display: grid;
     grid-template-columns: repeat(4, 24%);
@@ -89,6 +84,7 @@ export const AboutSkillsColumn = styled.div`
     line-height: 1.3em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    color: ${({ $isDarkMode }) => $isDarkMode && '#dee2e6'};
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     ul {

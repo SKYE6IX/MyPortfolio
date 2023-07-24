@@ -32,10 +32,11 @@ export const ProjectWrapper = styled(motion.div)`
   }
 `;
 
-export const ProjectTitle = styled.h2`
+export const ProjectTitle = styled.h2<{ $isDarkMode: boolean }>`
   text-transform: uppercase;
   font-family: 'Roboto' sans-serif;
   font-size: 1.2em;
+  color: ${({ $isDarkMode }) => $isDarkMode && '#f8f9fa'};
 `;
 
 export const ProjectLanguageWrapper = styled.div`
@@ -65,24 +66,19 @@ export const ProjectLanguageWrapper = styled.div`
     }
   }
 `;
-// .Project-inner-container .Project-language .darkListMode {
-//   background: #383737;
-//   box-shadow: 39px 39px 56px #232222, -39px -39px 56px #4d4c4c;
-// }
 
-export const ProjectText = styled.div`
+export const ProjectText = styled.div<{ $isDarkMode: boolean }>`
   font-family: 'Roboto' sans-serif;
   font-size: 1em;
   line-height: 1.2em;
+  color: ${({ $isDarkMode }) => $isDarkMode && '#f8f9fa'};
 `;
 
-export const ProjectLinks = styled.div`
+export const ProjectLinks = styled.div<{ $isDarkMode: boolean }>`
   margin-top: 1em;
   text-align: center;
   svg {
     font-size: 2em;
+    color: ${({ $isDarkMode }) => $isDarkMode && '#b7b7ac'};
   }
 `;
-// .Project-link-btn .iconDarkMode{
-//     color: #b7b7ac;
-// }

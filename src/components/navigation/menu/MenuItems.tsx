@@ -8,8 +8,9 @@ const menuLists = ['project', 'contact', 'about'];
 type MenuItemProps = {
   handleCloseNav?: () => void;
   isOpen?: boolean;
+  isDarkMode: boolean;
 };
-const MenuItem = ({ handleCloseNav, isOpen }: MenuItemProps) => {
+const MenuItem = ({ handleCloseNav, isOpen, isDarkMode }: MenuItemProps) => {
   const { windowWidth } = useWindowSize();
   return (
     <MenuLists variants={menuVariants}>
@@ -26,6 +27,7 @@ const MenuItem = ({ handleCloseNav, isOpen }: MenuItemProps) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             variants={listVariants}
+            $isDarkMode={isDarkMode}
           >
             {list}
           </Menu>

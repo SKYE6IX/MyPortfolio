@@ -19,23 +19,24 @@ export const Navigation = styled(motion.nav)`
   width: 200px;
 `;
 
-export const Sidebar = styled(motion.div)`
+export const Sidebar = styled(motion.div)<{ $isDarkMode: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   width: 250px;
-  background: #e9ecef;
+  background: ${({ $isDarkMode }) => ($isDarkMode ? '#adb5bd' : '#e9ecef')};
   border-radius: 0 0 10px 0;
 `;
 
-export const NavBarName = styled.h5`
+export const NavBarName = styled.h5<{ $isDarkMode: boolean }>`
   margin-left: 10px;
   font-family: monospace;
   font-weight: 700;
   letter-spacing: 0.3rem;
   font-size: 1.8rem;
   text-transform: uppercase;
+  color: ${({ $isDarkMode }) => ($isDarkMode ? ' #f8f9fa' : 'black')};
   a {
     text-decoration: none;
     color: inherit;

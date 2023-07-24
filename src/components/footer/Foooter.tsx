@@ -5,7 +5,7 @@ import { FooterContainer } from './style';
 const Foooter = () => {
   const { isDarkMode } = useContext(ThemeContext);
   return (
-    <FooterContainer>
+    <FooterContainer $isDarkMode={isDarkMode}>
       <h5>
         Made with <i className="fa-solid fa-heart"></i> by <b>skye</b>
       </h5>

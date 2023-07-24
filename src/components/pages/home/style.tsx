@@ -18,17 +18,18 @@ export const HomeContainer = styled(motion.div)`
   }
 `;
 
-export const HomeTextArea = styled(motion.div)`
+export const HomeTextArea = styled(motion.div)<{ $isDarkMode: boolean }>`
   h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 3em;
-    color: #1d314c;
+    color: ${({ $isDarkMode }) => ($isDarkMode ? '#f8f9fa' : '#1d314c')};
   }
   p {
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     width: 700px;
+    color: ${({ $isDarkMode }) => ($isDarkMode ? '#dee2e6' : '#1d314c')};
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     h1 {
@@ -47,7 +48,7 @@ export const HomeTextArea = styled(motion.div)`
   }
 `;
 
-export const HomeIconsWrapper = styled.div`
+export const HomeIconsWrapper = styled.div<{ $isDarkMode: boolean }>`
   ul {
     display: flex;
     justify-content: flex-start;
@@ -59,6 +60,7 @@ export const HomeIconsWrapper = styled.div`
   }
   svg {
     font-size: 3rem;
+    color: ${({ $isDarkMode }) => $isDarkMode && ' #b7b7ac'};
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     ul {
@@ -70,7 +72,7 @@ export const HomeIconsWrapper = styled.div`
   }
 `;
 
-export const HomeStacksWrapper = styled(motion.div)`
+export const HomeStacksWrapper = styled(motion.div)<{ $isDarkMode: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -78,7 +80,7 @@ export const HomeStacksWrapper = styled(motion.div)`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 2rem;
-    color: #1d314c;
+    color: ${({ $isDarkMode }) => ($isDarkMode ? '#f8f9fa' : '#1d314c')};
     margin: 0px;
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -108,96 +110,3 @@ export const homeItem = {
     },
   },
 };
-
-/* Small devices (landscape phones, 576px and up) */
-// @media only screen and (min-width: 320px) and (max-width: 767px){
-//   .Homepage-container {
-//     grid-template-columns: repeat(1, 90%);
-//     gap: 4em;
-//   }
-//   .Homepage-text-area h1 {
-//     font-weight: 400;
-//     font-size: 2.5em;
-//   }
-//   .Homepage-text-area p {
-//     font-size: 1.3em;
-//   }
-//   .Homepage-links ul {
-//     justify-content: center;
-//     gap: 1.2em;
-//   }
-//   .Homepage-links .icon {
-//     font-size: 1.3em;
-//   }
-//   .Homepage-img-area {
-//     text-align: center;
-//   }
-//   .Homepage-img-area .self-img {
-//     max-width: 79.1%;
-//     margin: 2.5em 2.2em 0;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 991px) {
-//   .Homepage-container {
-//     grid-template-columns: repeat(1, 80%);
-//     gap: 4em;
-//   }
-//   .Homepage-text-area h1 {
-//     font-weight: 500;
-//     font-size: 2.8em;
-//   }
-//   .Homepage-text-area p {
-//     font-size: 1.4em;
-//   }
-//   .Homepage-links ul {
-//     justify-content: center;
-//   }
-//   .Homepage-links .icon {
-//     font-size: 1.8em;
-//   }
-//   .Homepage-img-area {
-//     text-align: center;
-//   }
-//   .Homepage-img-area .self-img {
-//     max-width: 80%;
-//     margin: 2.5em 2.5em 0;
-//   }
-// }
-
-// @media only screen and (min-width: 992px) and (max-width: 1200px){
-//   .Homepage-container {
-//     display: grid;
-//     gap: 7em;
-//     grid-template-columns: repeat(1, 32em 20em);
-//   }
-//   .Homepage-text-area h1 {
-//     font-weight: 600;
-//     font-size: 3em;
-//   }
-//   .Homepage-text-area p {
-//     font-size: 1.5em;
-//   }
-//   .Homepage-img-area {
-//     text-align: center;
-//   }
-//   .Homepage-img-area .self-img {
-//     max-width: 75%;
-//     margin: 2.5em 2.5em 0;
-//   }
-//  }
-
-/* // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... } */

@@ -34,25 +34,29 @@ const NavBar = () => {
           animate={isOpen ? 'open' : 'closed'}
           ref={navRef}
         >
-          <Sidebar variants={sidebarVariants} />
+          <Sidebar $isDarkMode={isDarkMode} variants={sidebarVariants} />
           {isOpen && (
-            <NavBarName>
+            <NavBarName $isDarkMode={isDarkMode}>
               <NavLink to="/" onClick={handleCloseNav}>
                 skye
               </NavLink>
             </NavBarName>
           )}
-          <MenuItem handleCloseNav={handleCloseNav} isOpen={isOpen} />
+          <MenuItem
+            handleCloseNav={handleCloseNav}
+            isOpen={isOpen}
+            isDarkMode={isDarkMode}
+          />
           <MenuToggle toggle={() => toggleOpen()} />
         </Navigation>
       )}
 
       {windowWidth > 768 && (
         <>
-          <NavBarName>
+          <NavBarName $isDarkMode={isDarkMode}>
             <NavLink to="/">skye</NavLink>
           </NavBarName>
-          <MenuItem />
+          <MenuItem isDarkMode={isDarkMode} />
         </>
       )}
       <NavBarRightSideWrapper>

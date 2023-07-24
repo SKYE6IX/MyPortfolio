@@ -23,7 +23,7 @@ const About = () => {
   });
   return (
     <>
-      <ScrollBar style={{ scaleX }} />
+      <ScrollBar $isDarkMode={isDarkMode} style={{ scaleX }} />
       <AboutContainer
         variants={containerVariant}
         initial="hidden"
@@ -32,16 +32,18 @@ const About = () => {
         transition={{ delay: 1 }}
       >
         <TextWrapper>
-          <AboutTitle variants={itemVariant}>Hi there, I'm Azeez</AboutTitle>
+          <AboutTitle $isDarkMode={isDarkMode} variants={itemVariant}>
+            Hi there, I'm Azeez
+          </AboutTitle>
 
-          <AboutText variants={itemVariant}>
+          <AboutText $isDarkMode={isDarkMode} variants={itemVariant}>
             I'm a front-end developer who love to build user-friendly website
             and web applications. I started as a computer hardware engineer but
             when I created my first static landing page I learned something
             unexpected about myself and decided to change career to become a web
             developer.{' '}
           </AboutText>
-          <AboutText variants={itemVariant}>
+          <AboutText $isDarkMode={isDarkMode} variants={itemVariant}>
             As a web developer with experience in both front-end and back-end
             development, I am now looking to focus my career on front-end
             development roles. I have a strong understanding of <b>HTML</b>,
@@ -54,7 +56,7 @@ const About = () => {
             technologies to ensure that my work is always of the highest
             quality.
           </AboutText>
-          <AboutText variants={itemVariant}>
+          <AboutText $isDarkMode={isDarkMode} variants={itemVariant}>
             I am a team player with experience collaborating with designers and
             developers, and I am passionate about creating beautiful and
             functional websites that provide a great user experience. I am
@@ -67,9 +69,9 @@ const About = () => {
           </AboutText>
         </TextWrapper>
 
-        <AboutSkillsWrapper variants={itemVariant}>
+        <AboutSkillsWrapper $isDarkMode={isDarkMode} variants={itemVariant}>
           <h2>Main Skills</h2>
-          <AboutSkillsColumn>
+          <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>
                 Web design and web application, hardworking, critical thinking
@@ -83,7 +85,7 @@ const About = () => {
           </AboutSkillsColumn>
 
           <h2>Educations</h2>
-          <AboutSkillsColumn>
+          <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>
                 Ikoloba High School Ibadan,Nigeria.{' '}
@@ -104,7 +106,7 @@ const About = () => {
           </AboutSkillsColumn>
 
           <h2>Expriences</h2>
-          <AboutSkillsColumn>
+          <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>Created web applications using React and NextJs</li>
               <li>Built landing page for a car company</li>
@@ -114,7 +116,7 @@ const About = () => {
           </AboutSkillsColumn>
 
           <h2>Languages</h2>
-          <AboutSkillsColumn>
+          <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>
                 English. <b>Native</b>
@@ -125,7 +127,7 @@ const About = () => {
             </ul>
           </AboutSkillsColumn>
           <h2>In my free time</h2>
-          <AboutSkillsColumn>
+          <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>Learning new things</li>
               <li>Listen to music</li>

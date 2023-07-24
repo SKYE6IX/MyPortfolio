@@ -27,8 +27,8 @@ const Homepage = () => {
       exit={{ opacity: 0, y: -200 }}
       transition={{ delay: 1 }}
     >
-      <HomeTextArea variants={homeItem}>
-        <h1 className={isDarkMode && 'darkModeH1'}>Hello! I'm Azeez.</h1>
+      <HomeTextArea variants={homeItem} $isDarkMode={isDarkMode}>
+        <h1>Hello! I'm Azeez.</h1>
         <p>
           React web developer living in Moscow, Russia. I create web application
           to help business do better online. Turning idea to real life product
@@ -40,7 +40,7 @@ const Homepage = () => {
           </Button>
         </NavLink>
 
-        <HomeIconsWrapper>
+        <HomeIconsWrapper $isDarkMode={isDarkMode}>
           <ul>
             <li>
               <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">
@@ -69,7 +69,7 @@ const Homepage = () => {
         </HomeIconsWrapper>
       </HomeTextArea>
 
-      <HomeStacksWrapper variants={homeItem}>
+      <HomeStacksWrapper variants={homeItem} $isDarkMode={isDarkMode}>
         <h3>My stacks...</h3>
         <Stacks />
       </HomeStacksWrapper>

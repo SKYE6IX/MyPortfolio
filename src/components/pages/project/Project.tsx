@@ -50,7 +50,9 @@ const Project = () => {
     >
       {projectData.map((project, i) => (
         <ProjectWrapper key={i} variants={item}>
-          <ProjectTitle>{project.project_name}</ProjectTitle>
+          <ProjectTitle $isDarkMode={isDarkMode}>
+            {project.project_name}
+          </ProjectTitle>
           <img src={project.project_image} alt={project.project_name} />
           <ProjectLanguageWrapper>
             <ul>
@@ -62,10 +64,10 @@ const Project = () => {
               ))}
             </ul>
           </ProjectLanguageWrapper>
-          <ProjectText>
+          <ProjectText $isDarkMode={isDarkMode}>
             <Typography gutterBottom>{project.project_text}</Typography>
           </ProjectText>
-          <ProjectLinks>
+          <ProjectLinks $isDarkMode={isDarkMode}>
             {project.project_links.live_link && (
               <IconButton
                 LinkComponent="a"
