@@ -1,81 +1,55 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import { ThemeContext } from '../../../context/theme.context';
+import Stacks from './stacks/Stacks';
 import {
   HomeContainer,
   HomeTextArea,
   HomeIconsWrapper,
-  HomeImageWrapper,
+  HomeStacksWrapper,
+  homeContainer,
+  homeItem,
 } from './style';
-import { Button } from '@mui/material';
-// import img from '../images/IMG_1655.webp';
-
-//variant for framer motion
-const container = {
-  show: {
-    transition: {
-      staggerChildren: 0.35,
-    },
-  },
-};
-const item = {
-  hidden: {
-    opacity: 0,
-    y: 200,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.6,
-    },
-  },
-};
 
 const Homepage = () => {
   const { isDarkMode } = useContext(ThemeContext);
   return (
     <HomeContainer
-      variants={container}
+      variants={homeContainer}
       initial="hidden"
       animate="show"
       exit={{ opacity: 0, y: -200 }}
       transition={{ delay: 1 }}
     >
-      <HomeTextArea variants={item}>
-        <h1 className={isDarkMode && 'darkModeH1'}>Hey I'm Azeez!</h1>
+      <HomeTextArea variants={homeItem}>
+        <h1 className={isDarkMode && 'darkModeH1'}>Hello! I'm Azeez.</h1>
         <p>
-          React web developer living in Moscow, Russia. I create website to help
-          business do better online. Turning idea to real life product is what i
-          enjoy doing the most.
+          React web developer living in Moscow, Russia. I create web application
+          to help business do better online. Turning idea to real life product
+          is what i enjoy doing the most.
         </p>
-        <IconButton href="/project">
-          <Button variant="contained" color="success" className="Homepage-btn">
+        <NavLink to="/project">
+          <Button variant="contained" color="success">
             My Project
           </Button>
-        </IconButton>
+        </NavLink>
 
         <HomeIconsWrapper>
           <ul>
             <li>
               <IconButton LinkComponent="a" href="https://github.com/SKYE6IX">
-                <GitHubIcon
-                  className={`icon ${isDarkMode && 'darkModeIcon'}`}
-                />
+                <GitHubIcon />
               </IconButton>
             </li>
             <li>
               <IconButton LinkComponent="a" href="https://twitter.com/skye_6ix">
-                <TwitterIcon
-                  className={`icon ${isDarkMode && 'darkModeIcon'}`}
-                />
+                <TwitterIcon />
               </IconButton>
             </li>
             <li>
@@ -83,27 +57,23 @@ const Homepage = () => {
                 LinkComponent="a"
                 href="https://www.linkedin.com/in/azeezabiola/"
               >
-                <LinkedInIcon
-                  className={`icon ${isDarkMode && 'darkModeIcon'}`}
-                />
+                <LinkedInIcon />
               </IconButton>
             </li>
             <li>
               <IconButton LinkComponent="a" href="https://t.me/Skye6ix">
-                <TelegramIcon
-                  className={`icon ${isDarkMode && 'darkModeIcon'}`}
-                />
+                <TelegramIcon />
               </IconButton>
             </li>
           </ul>
         </HomeIconsWrapper>
       </HomeTextArea>
 
-      <HomeImageWrapper variants={item}>
-        {/* <img src={img} className="self-img" alt="azeez" /> */}
-      </HomeImageWrapper>
+      <HomeStacksWrapper variants={homeItem}>
+        <h3>My stacks...</h3>
+        <Stacks />
+      </HomeStacksWrapper>
     </HomeContainer>
   );
 };
-
 export default Homepage;

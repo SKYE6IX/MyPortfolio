@@ -23,7 +23,7 @@ const NavBar = () => {
   const { windowWidth } = useWindowSize();
 
   const handleCloseNav = () => {
-    toggleOpen();
+    isOpen && toggleOpen();
   };
   return (
     <NavBarContainer>
@@ -41,7 +41,7 @@ const NavBar = () => {
               </NavLink>
             </NavBarName>
           )}
-          <MenuItem handleCloseNav={handleCloseNav} />
+          <MenuItem handleCloseNav={handleCloseNav} isOpen={isOpen} />
           <MenuToggle toggle={() => toggleOpen()} />
         </Navigation>
       )}

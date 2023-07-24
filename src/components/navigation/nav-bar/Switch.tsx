@@ -28,7 +28,7 @@ const SwitchTheme = styled(Switch)(({ theme }) => ({
     width: 32,
     height: 32,
     '&:before': {
-      content: "''",
+      content: '""',
       position: 'absolute',
       width: '100%',
       height: '100%',
