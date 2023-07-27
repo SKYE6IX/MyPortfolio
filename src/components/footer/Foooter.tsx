@@ -9,7 +9,7 @@ const Foooter = () => {
       <h5>
         Made with <i className="fa-solid fa-heart"></i> by <b>skye</b>
       </h5>
-      <span>&copy; 2022</span>
+      <span>&copy; 2023</span>
     </FooterContainer>
   );
 };

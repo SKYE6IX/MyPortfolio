@@ -54,7 +54,7 @@ export const projectData: ProjectDataType[] = [
       },
     ],
     project_text:
-      ' A landing page for a car sale company that help user easily get in touch with the company a single click.It was built with react and styled component Added a sever using Express and node mailer, which allow,Company to receive request call mails from users.',
+      ' A landing page for a car sale company that helps user easily get in touch with the company on a single click. It was built with react and styled component. Added a sever using Express and node mailer, which allow Company to receive request call mails from users.',
     project_links: {
       git_hub_link: 'https://github.com/SKYE6IX/FCS-Landing-Page',
       live_link: 'https://fastcarsale.ru',
@@ -74,7 +74,7 @@ export const projectData: ProjectDataType[] = [
       },
     ],
     project_text:
-      'Developed a web application using react and styled-component additionally with MUI component base.It helps user be able to make use of the provided color palette or create their own.',
+      'Developed a web application using react and styled-component additionally with MUI component base.It helps users be able to make use of the provided color palette or create their own.',
     project_links: {
       git_hub_link: 'https://github.com/SKYE6IX/ColorPicker',
     },

@@ -122,7 +122,7 @@ const About = () => {
                 English. <b>Native</b>
               </li>
               <li>
-                Russia. <b>Elementry</b>
+                Russian. <b>Elementry</b>
               </li>
             </ul>
           </AboutSkillsColumn>
@@ -130,7 +130,7 @@ const About = () => {
           <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>Learning new things</li>
-              <li>Listen to music</li>
+              <li>Listening to music</li>
               <li>Skating</li>
             </ul>
           </AboutSkillsColumn>
