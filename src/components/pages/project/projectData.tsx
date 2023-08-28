@@ -81,29 +81,6 @@ export const projectData: ProjectDataType[] = [
     },
   },
   {
-<<<<<<< HEAD
-    project_name: 'fastcarsale',
-    project_image: fastCarSale,
-    project_stacks: [
-      {
-        stack_name: 'React',
-        icon: 'fa-brands fa-react',
-      },
-      {
-        stack_name: 'styled-component',
-        icon: '',
-      },
-    ],
-    project_text:
-      ' A landing page for a car sale company that helps user easily get in touch with the company on a single click. It was built with react and styled component. Added a sever using Express and node mailer, which allow Company to receive request call mails from users.',
-    project_links: {
-      git_hub_link: 'https://github.com/SKYE6IX/FCS-Landing-Page',
-      live_link: 'https://fastcarsale.ru',
-    },
-  },
-  {
-=======
->>>>>>> develop
     project_name: 'react color app',
     project_image: colorImg,
     project_stacks: [
