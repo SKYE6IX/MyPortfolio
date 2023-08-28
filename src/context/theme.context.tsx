@@ -6,6 +6,7 @@ type DefaultValue = {
 };
 
 export const ThemeContext = createContext<DefaultValue>({ isDarkMode: false });
+
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkmode] = useState(
     JSON.parse(window.localStorage.getItem('darkMode')!) || false

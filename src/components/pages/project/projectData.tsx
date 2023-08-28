@@ -1,7 +1,7 @@
 import skyecampImg from './images/skyecamp.jpeg';
 import colorImg from './images/react_color.png';
 import fastCarSale from './images/fast_car_sale.png';
-
+import alphaWallet from './images/alpha_wallet.png';
 interface ProjectDataType {
   project_name: string;
   project_image: any;
@@ -17,6 +17,46 @@ interface ProjectDataType {
 }
 
 export const projectData: ProjectDataType[] = [
+  {
+    project_name: 'Aplha Wallet',
+    project_image: alphaWallet,
+    project_stacks: [
+      {
+        stack_name: 'nextjs',
+        icon: '',
+      },
+      {
+        stack_name: 'styled-component',
+        icon: '',
+      },
+    ],
+    project_text:
+      'A dynamic landing page built using cutting-edge technologies of Next.js and styled-component. Seamless animation using framer motion and effortless language switches.',
+    project_links: {
+      git_hub_link: 'https://github.com/SKYE6IX/Alpha-Wallet',
+      live_link: 'https://gilded-stroopwafel-9851f6.netlify.app',
+    },
+  },
+  {
+    project_name: 'fastcarsale',
+    project_image: fastCarSale,
+    project_stacks: [
+      {
+        stack_name: 'React',
+        icon: 'fa-brands fa-react',
+      },
+      {
+        stack_name: 'styled-component',
+        icon: '',
+      },
+    ],
+    project_text:
+      ' A landing page for a car sale company that help user easily get in touch with the company a single click.It was built with react and styled component Added a sever using Express and node mailer, which allow,Company to receive request call mails from users.',
+    project_links: {
+      git_hub_link: 'https://github.com/SKYE6IX/FCS-Landing-Page',
+      live_link: 'https://fastcarsale.ru',
+    },
+  },
   {
     project_name: 'skye camp',
     project_image: skyecampImg,
@@ -41,6 +81,7 @@ export const projectData: ProjectDataType[] = [
     },
   },
   {
+<<<<<<< HEAD
     project_name: 'fastcarsale',
     project_image: fastCarSale,
     project_stacks: [
@@ -61,6 +102,8 @@ export const projectData: ProjectDataType[] = [
     },
   },
   {
+=======
+>>>>>>> develop
     project_name: 'react color app',
     project_image: colorImg,
     project_stacks: [
