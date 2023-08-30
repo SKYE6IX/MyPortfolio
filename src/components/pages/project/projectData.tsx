@@ -34,7 +34,7 @@ export const projectData: ProjectDataType[] = [
       'A dynamic landing page built using cutting-edge technologies of Next.js and styled-component. Seamless animation using framer motion and effortless language switches.',
     project_links: {
       git_hub_link: 'https://github.com/SKYE6IX/Alpha-Wallet',
-      live_link: 'https://gilded-stroopwafel-9851f6.netlify.app',
+      live_link: 'https://alpha-wallet.pages.dev/en',
     },
   },
   {
