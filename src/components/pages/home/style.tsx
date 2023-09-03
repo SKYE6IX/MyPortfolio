@@ -37,7 +37,7 @@ export const HomeTextArea = styled(motion.div)<{ $isDarkMode: boolean }>`
     }
     p {
       font-size: 1.3rem;
-      width: 85%;
+      width: 100%;
     }
   }
   @media only screen and (min-width: 1201px) and (max-width: 1500px) {

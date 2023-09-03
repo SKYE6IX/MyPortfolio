@@ -36,7 +36,7 @@ const Homepage = () => {
         </p>
         <NavLink to="/project" style={{ textDecoration: 'none' }}>
           <Button variant="contained" color="success">
-            My Project
+            My Projects
           </Button>
         </NavLink>
 

@@ -84,7 +84,7 @@ const About = () => {
             </ul>
           </AboutSkillsColumn>
 
-          <h2>Educations</h2>
+          <h2>Qualifications</h2>
           <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>
@@ -105,13 +105,13 @@ const About = () => {
             </ul>
           </AboutSkillsColumn>
 
-          <h2>Expriences</h2>
+          <h2>Accomplishments</h2>
           <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
               <li>Created web applications using React and NextJs</li>
-              <li>Built landing page for a car company</li>
+              <li>Built multiple dynamic landing page</li>
               <li>Used REST and GraphQL to design and create APIs</li>
-              <li>Working with MongoDB using mongoose</li>
+              <li>Worked with MongoDB using mongoose</li>
             </ul>
           </AboutSkillsColumn>
 
@@ -129,7 +129,7 @@ const About = () => {
           <h2>In my free time</h2>
           <AboutSkillsColumn $isDarkMode={isDarkMode}>
             <ul>
-              <li>Learning new things</li>
+              <li>Learning new technologies</li>
               <li>Listening to music</li>
               <li>Skating</li>
             </ul>
