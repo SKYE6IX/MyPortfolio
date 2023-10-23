@@ -2,6 +2,7 @@ import skyecampImg from './images/skyecamp.jpeg';
 import colorImg from './images/react_color.png';
 import fastCarSale from './images/fast_car_sale.png';
 import alphaWallet from './images/alpha_wallet.png';
+import cryptoPay from './images/crypto-pay.png';
 interface ProjectDataType {
   project_name: string;
   project_image: any;
@@ -55,6 +56,26 @@ export const projectData: ProjectDataType[] = [
     project_links: {
       git_hub_link: 'https://github.com/SKYE6IX/FCS-Landing-Page',
       live_link: 'https://fastcarsale.ru',
+    },
+  },
+  {
+    project_name: 'crypto pay',
+    project_image: cryptoPay,
+    project_stacks: [
+      {
+        stack_name: 'nextjs',
+        icon: '',
+      },
+      {
+        stack_name: 'sass',
+        icon: '',
+      },
+    ],
+    project_text:
+      'Crypto Pay Landing page was built to help showcase what the company offers and make it easier for user to understand how the company application works. Used a cutting-edge technologie of Nextjs and Sass to bring a dynamic page that included smooth animations.',
+    project_links: {
+      git_hub_link: 'https://github.com/SKYE6IX/crypto-pay',
+      live_link: 'https://crypto-pay.pages.dev',
     },
   },
   {
