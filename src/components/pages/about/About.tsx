@@ -97,10 +97,10 @@ const About = () => {
               </li>
               <li>
                 Udemy Online Course.{' '}
-                <b>Complete Web Developer BootCamp. 2021-2022</b>
+                <b>Complete Web Developer BootCamp. 2020-2021</b>
               </li>
               <li>
-                Udemy Online Course. <b>Complete React BootCamp. 2022</b>
+                Udemy Online Course. <b>Complete React BootCamp. 2021</b>
               </li>
             </ul>
           </AboutSkillsColumn>
